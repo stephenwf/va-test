@@ -6,6 +6,143 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>va-test</title>
     <meta name="description" content="">
+    <style>
+      .patchwork-annotation-detail {
+        position: absolute;
+        background: #fff;
+        top: 30px;
+        left: 30px;
+        width: 320px;
+        border-radius: 3px;
+        padding: 15px;
+        font-size: 14px;
+      }
+
+      .patchwork-annotation-detail__label {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: .8px;
+        line-height: 1.2;
+        margin-bottom: 14px;
+        margin-top: 0;
+      }
+
+      .patchwork-annotation-pin {
+        position: relative;
+        outline: none;
+        pointer-events: none;
+      }
+
+      .patchwork-annotation-pin:hover {
+        /*outline: 2px dotted rgba(0, 0, 0, .6);*/
+        /*border: 1px solid #fff;*/
+      }
+
+      .patchwork-fullscreen-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .4);
+      }
+
+      .patchwork-fullscreen-toggle {
+        color: #1d1e20;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+        padding: 9px 16px;
+        text-transform: uppercase;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #eee;
+        border-radius: 3px;
+        border: none;
+      }
+
+      .patchwork-fullscreen-toggle--is-mobile {
+        background: #F3F935;
+        color: #000;
+        width: 200px;
+        top: 50%;
+        right: 50%;
+        margin-right: -100px;
+      }
+
+      .patchwork-fullscreen-toggle--is-mobile.patchwork-fullscreen-toggle--is-fullscreen {
+        background: #eee;
+        color: #1d1e20;
+        width: initial;
+        top: 20px;
+        right: 20px;
+        margin-right: auto;
+      }
+
+      .patchwork-annotation-pin:before {
+        cursor: pointer;
+        pointer-events: initial;
+        content: '+';
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        left: 50%;
+        margin-left: -15px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #000;
+        top: -20px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      .patchwork-annotation-pin--selected:before {
+        content: '×';
+        background: #000;
+        color: #fff;
+      }
+
+      .patchwork-annotation-pin:after {
+        content: '';
+        position: absolute;
+        background: #fff;
+        left: 50%;
+        margin-left: -2px;
+        width: 4px;
+        height: 20px;
+        top: 9px;
+        text-align: center;
+        line-height: 28px;
+      }
+
+      .patchwork-annotation-pin--selected:after {
+        background: #000;
+        color: #fff;
+      }
+
+      .patchwork-container {
+        position: relative;
+        background: #000;
+        max-width: 1200px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .patchwork-annotation-detail__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        font-size: 30px;
+        border: none;
+        cursor: pointer;
+        line-height: 30px;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
