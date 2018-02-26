@@ -12,7 +12,7 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
-    "@canvas-panel/patchwork-plugin": "^0.0.1",
+    "@canvas-panel/patchwork-plugin": "^0.0.2",
     "openseadragon": "^2.3.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

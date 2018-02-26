@@ -1,3 +1,5 @@
+require('@canvas-panel/core/lib/polyfill');
+
 const patchwork = require('@canvas-panel/patchwork-plugin');
 
 
